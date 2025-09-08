@@ -28,12 +28,12 @@ model User {
 }
 
 model Org {
-  id          String @id @default(uuid())
-  name        String
-  author_name String
-  email       String @unique
-  whatsapp    String
-  password    String
+  id            String @id @default(uuid())
+  name          String
+  author_name   String
+  email         String @unique
+  whatsapp      String
+  password_hash String
 
   cep          String
   state        String
