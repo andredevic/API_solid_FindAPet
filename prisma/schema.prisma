@@ -59,7 +59,8 @@ model Pet {
   energy_level String
   environment  String
 
-
+  isAdopted    Boolean @default(false)
+  
   org Org @relation(fields: [org_id], references: [id])
 
   adoptions Adoptions[]
