@@ -15,6 +15,7 @@ export class PrismaPetsRepository implements PetsRepository {
         age: params.age,
         size: params.size,
         energy_level: params.energy_level,
+        environment: params.environment,
         org: {
           city: {
             contains: params.city,
@@ -29,6 +30,15 @@ export class PrismaPetsRepository implements PetsRepository {
 
   async create(data: Prisma.PetUncheckedCreateInput): Promise<Pet> {
     const pet = await prisma.pet.create({ data })
+
+    return pet
+  }
+
+  async update(id: string, data: Partial<Pet>): Promise<Pet> {
+    const pet = await prisma.pet.update({
+      where: { id },
+      data,
+    })
 
     return pet
   }

@@ -13,7 +13,6 @@ describe('Fetch Nearby Orgs Use Case', () => {
   })
 
   it('should be able to fetch nearby orgs', async () => {
-    // Org próxima do usuário
     await orgsRepository.create({
       name: 'Near org',
       author_name: 'andre',
@@ -29,7 +28,6 @@ describe('Fetch Nearby Orgs Use Case', () => {
       longitude: -48.036,
     })
 
-    // Org distante do usuário
     await orgsRepository.create({
       name: 'Far org',
       author_name: 'maria',

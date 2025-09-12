@@ -1,12 +1,12 @@
 import type { AdoptionsRepository } from '@/repositories/adoptions-repository'
-import type { Adoptions, Pet, User } from '@prisma/client'
+import type { AdoptionWithPetAndUser } from '../../@types/adoption' // Importando o tipo completo
 
 interface GetHistoryAdoptionsOrgUseCaseRequest {
   orgId: string
 }
 
 interface GetHistoryAdoptionsOrgUseCaseResponse {
-  adoptions: (Adoptions & { pet: Pet; user: User })[]
+  adoptions: AdoptionWithPetAndUser[]
 }
 
 export class GetHistoryAdoptionsOrgUseCase {

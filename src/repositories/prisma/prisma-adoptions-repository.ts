@@ -1,4 +1,5 @@
-import { AdoptionWithPetAndUser } from '@/@types/adoption'
+import type { Adoptions } from '@prisma/client'
+import { AdoptionWithPetAndUser } from '../../../@types/adoption'
 import { AdoptionsRepository } from '../adoptions-repository'
 import { prisma } from '@/lib/prisma'
 
@@ -37,13 +38,14 @@ export class PrismaAdoptionsRepository implements AdoptionsRepository {
     return adoptions
   }
 
-  async create(adoption: AdoptionWithPetAndUser): Promise<void> {
-    await prisma.adoptions.create({
+  async create(data: { userId: string; petId: string }): Promise<Adoptions> {
+    const adoption = await prisma.adoptions.create({
       data: {
-        id: adoption.id,
-        pet_id: adoption.pet_id,
-        user_id: adoption.user_id,
+        pet_id: data.petId,
+        user_id: data.userId,
       },
     })
+
+    return adoption
   }
 }
