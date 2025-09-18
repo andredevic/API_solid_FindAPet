@@ -1,15 +1,15 @@
 ## Regras de negócio
 
 ### User
-[] O usuário que quer adotar, entrará em contato com a ORG via WhatsApp
-[] Todos os filtros, além da cidade, são opcionais
+[x] O usuário que deseja adotar um pet deve entrar em contato com a ORG via WhatsApp.
+[x] Todos os filtros de busca de pets, além da cidade, são opcionais.
 ### Pet
-[] Para listar os pets, obrigatoriamente precisamos informar a cidade
-[] Um pet deve estar ligado a uma ORG
+[x] Para listar pets disponíveis para adoção, é obrigatório informar a cidade.
+[x] Todo pet deve estar vinculado a uma ORG.
 ### Org
-[] Uma ORG precisa ter um endereço e um número de WhatsApp
-[] Para uma ORG acessar a aplicação como admin, ela precisa estar logada
-[]para uma ORG acessar o historico de adocoes e necessario estar logada
+[x] Uma ORG deve possuir endereço e número de WhatsApp cadastrados.
+[x] Para acessar a aplicação como administradora, a ORG precisa estar autenticada.
+[x] Para visualizar o histórico de adoções, a ORG precisa estar autenticada.
 
 
 
