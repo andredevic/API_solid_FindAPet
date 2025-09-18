@@ -5,8 +5,7 @@ declare module '@fastify/jwt' {
     // payload que você usa no token
     user: {
       sub: string
-      email: string
-      role?: 'ADMIN' | 'USER'
+      role: 'ADMIN' | 'USER'
     }
   }
 }
