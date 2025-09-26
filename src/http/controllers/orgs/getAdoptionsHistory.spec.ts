@@ -11,7 +11,6 @@ describe('Adoptions History Org Controller', () => {
   beforeAll(async () => {
     await app.ready()
 
-    // Cria org
     const password_hash = await hash('123456', 6)
     const org = await prisma.org.create({
       data: {
@@ -30,14 +29,12 @@ describe('Adoptions History Org Controller', () => {
       },
     })
 
-    // Autentica org
     const authResponse = await request(app.server).post('/org/sessions').send({
       email: 'ongadote@email.com',
       password: '123456',
     })
     token = authResponse.body.token
 
-    // Cria usuário
     const user_password_hash = await hash('654321', 6)
     const user = await prisma.user.create({
       data: {
@@ -48,7 +45,6 @@ describe('Adoptions History Org Controller', () => {
       },
     })
 
-    // Cria pet
     const pet = await prisma.pet.create({
       data: {
         name: 'Rex',
@@ -61,7 +57,6 @@ describe('Adoptions History Org Controller', () => {
       },
     })
 
-    // Marca adoção
     await prisma.adoptions.create({
       data: {
         user_id: user.id,
