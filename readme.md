@@ -1,3 +1,10 @@
+[![Run E2E Tests](https://github.com/andredevic/API_solid_FindAPet/actions/workflows/run-e2e-tests.yml/badge.svg)](https://github.com/andredevic/API_solid_FindAPet/actions/workflows/run-e2e-tests.yml)
+[![Run Unit Tests](https://github.com/andredevic/API_solid_FindAPet/actions/workflows/run-unit-tests.yml/badge.svg)](https://github.com/andredevic/API_solid_FindAPet/actions/workflows/run-unit-tests.yml)
+![Language](https://img.shields.io/github/languages/top/andredevic/API_solid_FindAPet)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+
+
 # 🐾 Find a Pet API
 
 A RESTful API developed in **Node.js** with **Fastify** for a pet adoption system, allowing organizations (ORGs) to register pets and users to find and adopt them.
